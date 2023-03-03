@@ -1,5 +1,6 @@
 import boto3
 from os import getenv
+import json
 
 
 region_name = getenv("APP_REGION")
@@ -10,6 +11,7 @@ users_table = boto3.resource(
 
 
 def lambda_handler(event, context):
+    print(event)
     User = read_event(event)
 
     users_table.put_item(Item=User)
