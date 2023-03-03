@@ -21,6 +21,7 @@ def read(event):
 
     Item = admins_table.get_item(Key=key)
     admin = Item["Item"]
+    admin.pop('password')
     return {
         'statusCode': 200,
         'body': admin
