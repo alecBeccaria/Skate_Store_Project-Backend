@@ -1,0 +1,25 @@
+version: '3.9'
+services:
+  Admin_Get:
+    build:
+      context: .
+      dockerfile: Dockerfiles/Dockerfile_GET
+    image: admin_get:1.0
+
+  Admin_Post:
+    build:
+      context: .
+      dockerfile: Dockerfiles/Dockerfile_POST
+    image: admin_post:1.0
+
+  Admin_Delete:
+    build:
+      context: .
+      dockerfile: Dockerfiles/Dockerfile_DELETE
+    image: admin_delete:1.0
+
+  Admin_Put:
+    build:
+      context: .
+      dockerfile: Dockerfiles/Dockerfile_PUT
+    image: admin_put:1.0

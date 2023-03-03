@@ -1,0 +1,25 @@
+version: '3.9'
+services:
+  User_Get:
+    build:
+      context: .
+      dockerfile: Dockerfiles/Dockerfile_GET
+    image: user_get:1.0
+
+  User_Post:
+    build:
+      context: .
+      dockerfile: Dockerfiles/Dockerfile_POST
+    image: user_post:1.0
+
+  User_Delete:
+    build:
+      context: .
+      dockerfile: Dockerfiles/Dockerfile_DELETE
+    image: user_delete:1.0
+
+  User_Put:
+    build:
+      context: .
+      dockerfile: Dockerfiles/Dockerfile_PUT
+    image: user_put:1.0

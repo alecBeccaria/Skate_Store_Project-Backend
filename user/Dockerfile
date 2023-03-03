@@ -1,0 +1,12 @@
+FROM public.ecr.aws/lambda/python:3.9
+
+#Copys files over
+COPY ./User_Get.py ${LAMBDA_TASK_ROOT}
+COPY ./requirements.txt .
+
+#Installs dependencies
+RUN pip3 install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
+
+#This makes it the entry point
+#CMD ["app.lambda_handler"]
+CMD ["User_Get.lambda_handler"]

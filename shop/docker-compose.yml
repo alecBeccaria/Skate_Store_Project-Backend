@@ -1,0 +1,43 @@
+version: '3.9'
+services:
+  # Item_Get:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfiles/Dockerfile_GET
+  #   image: item_get:1.0
+
+  # Item_Get_All:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfiles/Dockerfile_GET_ALL
+  #   image: item_get_all:1.0
+
+  Item_Get_Category:
+    build:
+      context: .
+      dockerfile: Dockerfiles/Dockerfile_GET_CATEGORY
+    image: item_get_category:1.0
+
+  # Item_Get_Search:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfiles/Dockerfile_GET_SEARCH
+  #   image: item_get_search:1.0
+
+  # Item_Post:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfiles/Dockerfile_POST
+  #   image: item_post:1.0
+
+  # Item_Delete:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfiles/Dockerfile_DELETE
+  #   image: item_delete:1.0
+
+  # Item_Put:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfiles/Dockerfile_PUT
+  #   image: item_put:1.0
