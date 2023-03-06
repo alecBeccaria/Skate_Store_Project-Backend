@@ -14,9 +14,9 @@ def lambda_handler(event, context):
         'username': username
     }
 
-    performances_table = boto3.resource(
+    users_table = boto3.resource(
         'dynamodb', region_name=region_name).Table('Users')
-    response = performances_table.update_item(
+    response = users_table.update_item(
         UpdateExpression='set password=:p, email=:e, cart=:c',
         ExpressionAttributeValues={
             ':p': password,

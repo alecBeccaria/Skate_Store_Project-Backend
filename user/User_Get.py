@@ -24,7 +24,7 @@ def read(event):
     try:
         Item = admins_table.get_item(Key=key)
         print(Item)
-        if Item["Item"] != None:
+        if Item["Item"] is not None:
             print("admin found!")
             Item["Item"].pop('password')
             return {"statusCode": 200, "body": Item["Item"]}
@@ -32,7 +32,7 @@ def read(event):
         print(e)
         try:
             Item = users_table.get_item(Key=key)
-            if Item["Item"] != None:
+            if Item["Item"] is not None:
                 print("user found!")
                 Item["Item"].pop('password')
                 return {"statusCode": 200, "body": Item["Item"]}

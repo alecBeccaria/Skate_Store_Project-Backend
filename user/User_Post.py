@@ -1,6 +1,5 @@
 import boto3
 from os import getenv
-import json
 
 
 region_name = getenv("APP_REGION")
@@ -19,16 +18,12 @@ def lambda_handler(event, context):
 
 
 def read_event(event):
-    username = event['username']
-    password = event['password']
-    email = event['email']
-    cart = []
-
     User = {
-        "username": username,
-        "password": password,
-        "email": email,
-        "cart": cart
+        "username": event['username'],
+        "password": event['password'],
+        "email": event['email'],
+        "cart": [],
+        "role": 'user'
     }
 
     return User
