@@ -26,6 +26,7 @@ def read(event):
         print(Item)
         if Item["Item"] != None:
             print("admin found!")
+            Item["Item"].pop('password')
             return {"statusCode": 200, "body": Item["Item"]}
     except Exception as e:
         print(e)
@@ -33,6 +34,7 @@ def read(event):
             Item = users_table.get_item(Key=key)
             if Item["Item"] != None:
                 print("user found!")
+                Item["Item"].pop('password')
                 return {"statusCode": 200, "body": Item["Item"]}
 
         except Exception as e:
